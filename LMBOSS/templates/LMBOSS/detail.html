@@ -1,0 +1,9 @@
+<h1>{{ phonenum.number }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% if phonenum %}
+    <ul>
+        <li>{{ phonenum.get_operator_display }}</li>
+    </ul>
+{% endif %}

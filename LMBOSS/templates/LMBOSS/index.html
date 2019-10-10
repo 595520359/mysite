@@ -1,0 +1,9 @@
+{% if phone_numbers %}
+    <ul>
+    {% for phone in phone_numbers %}
+       <li><a href="{% url 'LMBOSS:detail' phone.number %}">{{ phone.number }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
